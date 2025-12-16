@@ -1,10 +1,8 @@
 [build]
-  # No build command needed for static site
-  command = ""
-  # Publish the root directory
-  publish = "."
-  # Don't process Go functions
-  functions = "/.netlify/functions/"
+  # Install dependencies and run build script
+  command = "npm install && npm run build"
+  # Publish from the dist directory
+  publish = "dist"
 
 # Redirects for SPA (Single Page Application)
 [[redirects]]

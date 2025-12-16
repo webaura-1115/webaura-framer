@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "WebAura Framer static website",
   "scripts": {
-    "build": "echo 'No build step required for static site' && exit 0"
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/webaura-1115/webaura-framer.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
 }
