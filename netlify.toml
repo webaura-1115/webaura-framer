@@ -1,0 +1,33 @@
+[build]
+  # Directory to change to before starting a build
+  base = "/"
+  
+  # Default build command
+  command = "npm run build"
+  
+  # Directory containing the deploy-ready HTML files and assets
+  publish = "dist"
+
+# Redirects for SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+# Build settings for different contexts
+[context.production]
+  command = "npm run build"
+  publish = "dist"
+
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "dist"
+
+[context.branch-deploy]
+  command = "npm run build"
+  publish = "dist"
